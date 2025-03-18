@@ -6,6 +6,6 @@ subtitle: 5mps
 
 數據選擇:
 
-- <a href="5mps_southWind_neapTide.md">5mps_southWind_neapTide</a>
+- "./緩衝/5mps"
 - <a href="https://www.must.edu.mo">5mps_southWind_springTide</a>
 
