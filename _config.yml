@@ -21,7 +21,7 @@ author: MCIGI研究組
 
 navbar-links:
   緩衝空間: 
-    - 5mps: "aboutme"
+    - 5mps: "./緩衝/5mps"
     - 20mps: "https://beautifuljekyll.com"
     - 30mps: "https://beautifuljekyll.com"
     - 40mps: "https://beautifuljekyll.com"
