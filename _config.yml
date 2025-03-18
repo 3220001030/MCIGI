@@ -20,11 +20,11 @@ author: Some Person
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  Resources:
+  緩衝空間: "aboutme"
+  動態空間:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  生態空間: "https://deanattali.com"
 
 ################
 # --- Logo --- #
