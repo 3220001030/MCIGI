@@ -30,35 +30,39 @@ subtitle: 基於陸海統籌的澳門海岸带臨界空間功能優化模擬模�
     
 
 
+<!-- Add this CSS either in your <head> or external stylesheet -->
 <style>
-  .row {
+  .logo-container {
     display: flex;
-    justify-content: center; /* Horizontal centering */
-    align-items: center; /* Vertical centering */
-    gap: 0px; /* Space between images */
-    flex-wrap: wrap; /* Wrap to new line on small screens */
+    justify-content: center;
+    gap: 40px; /* Adjust spacing between images */
+    flex-wrap: wrap; /* Allows wrapping on mobile */
+    margin: 20px 0; /* Vertical spacing only */
   }
 
-  .column {
-    text-align: center; /* Center image within column */
+  .logo-column {
+    flex: 0 0 auto; /* Prevents columns from stretching */
   }
-
-  .column img {
-    display: block; /* Remove image default spacing */
-    margin: 0 auto; /* Center image horizontally */
+  
+  .logo-column img {
+    display: block;
+    width: 200px; /* Control size via CSS instead of HTML */
+    height: 200px;
+    object-fit: contain; /* Prevents image distortion */
   }
 </style>
 
-<div class="container">
-  <div class="row">
-    <div class="column">
-      <img src="./assets/img/NSFC.png" alt="NSFC" width="200" height="200">
-    </div>
-    <div class="column">
-      <img src="./assets/img/FDCT.png" alt="FDCT" width="200" height="200">
-    </div>
+<!-- Your image section -->
+<div class="logo-container">
+  <div class="logo-column">
+    <img src="./assets/img/NSFC.png" alt="NSFC">
+  </div>
+  <div class="logo-column">
+    <img src="./assets/img/FDCT.png" alt="FDCT">
   </div>
 </div>
+
+<!-- The rest of your page content remains untouched -->
 
 
 
