@@ -21,20 +21,10 @@ author: MCIGI研究組
 
 navbar-links:
   緩衝空間: 
-    - 5mps_southWind_neapTide: "https://beautifuljekyll.com"
-    - 5mps_southWind_springTide: "https://beautifuljekyll.com"
-    - 20mps_southeastWind_neapTide: "https://beautifuljekyll.com"
-    - 20mps_southeastWind_springTide: "https://beautifuljekyll.com"
-    - 20mps_southWind_neapTide: "https://beautifuljekyll.com"
-    - 20mps_southWind_springTide: "https://beautifuljekyll.com"
-    - 30mps_southeastWind_neapTide: "https://beautifuljekyll.com"
-    - 30mps_southeastWind_springTide: "https://beautifuljekyll.com"
-    - 30mps_southWind_neapTide: "https://beautifuljekyll.com"
-    - 30mps_southWind_springTide: "https://beautifuljekyll.com"
-    - 40mps_southeastWind_neapTide: "https://beautifuljekyll.com"
-    - 40mps_southeastWind_springTide: "https://beautifuljekyll.com"
-    - 40mps_southWind_neapTide: "https://beautifuljekyll.com"
-    - 40mps_southWind_springTide: "https://beautifuljekyll.com"
+    - 5mps: "aboutme"
+    - 20mps: "https://beautifuljekyll.com"
+    - 30mps: "https://beautifuljekyll.com"
+    - 40mps: "https://beautifuljekyll.com"
   動態空間:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
