@@ -26,8 +26,11 @@ navbar-links:
     - 30mps: "./緩衝/30mps"
     - 40mps: "./緩衝/40mps"
   動態空間:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+    - 1930-2020: "./動態/1930-2020"
+    - e5: "./動態/e5"
+    - e6-e10: "./動態/e6-e10"
+    - e11-e15: "./動態/e11-e15"
+    - e22-e24: "./動態/e22-e24"
   生態空間: "https://3220001030.github.io/Ecological_Space/"
 
 ################
