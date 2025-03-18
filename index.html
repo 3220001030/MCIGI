@@ -3,3 +3,35 @@ layout: home
 title: NSFC-FDCT
 subtitle: 基於陸海統籌的澳門海岸带臨界空間功能優化模擬模型
 ---
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protected Page</title>
+    <style>
+        .content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- Your existing page content here -->
+        <h1>Welcome to the Secret Page! 🤫</h1>
+        <p>This is your protected content...</p>
+    </div>
+
+    <script>
+        // Simple password check
+        const correctPassword = "MCIGI"; // Change this to your desired password
+        const userPassword = prompt("Please enter the password:");
+
+        if (userPassword === correctPassword) {
+            document.querySelector('.content').style.display = 'block';
+        } else {
+            alert("Incorrect password. Redirecting...");
+            window.location.href = "https://example.com"; // Redirect to a different page
+        }
+    </script>
+</body>
+</html>
