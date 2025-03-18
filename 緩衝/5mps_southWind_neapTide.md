@@ -5,5 +5,5 @@ subtitle: 5mps_southWind_neapTide
 ---
 
 <video width="100%" controls>
-  <source src="./5mps_southWind_neapTide/video.mp4" type="video/mp4">
+  <source src="../5mps_southWind_neapTide/video.mp4" type="video/mp4">
 </video>
