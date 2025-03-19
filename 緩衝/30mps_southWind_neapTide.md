@@ -118,129 +118,125 @@ img {
 
 <div class="container">
   <div class="mySlides">
-    <div class="numbertext">1 / 25</div>
+    <div class="numbertext">1 / 24</div>
     <img src="../30mps_southWind_neapTide/0001.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">2 / 25</div>
+    <div class="numbertext">2 / 24</div>
     <img src="../30mps_southWind_neapTide/0002.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">3 / 25</div>
+    <div class="numbertext">3 / 24</div>
     <img src="../30mps_southWind_neapTide/0003.png" style="width:100%">
   </div>
     
   <div class="mySlides">
-    <div class="numbertext">4 / 25</div>
+    <div class="numbertext">4 / 24</div>
     <img src="../30mps_southWind_neapTide/0004.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">5 / 25</div>
+    <div class="numbertext">5 / 24</div>
     <img src="../30mps_southWind_neapTide/0005.png" style="width:100%">
   </div>
     
   <div class="mySlides">
-    <div class="numbertext">6 / 25</div>
+    <div class="numbertext">6 / 24</div>
     <img src="../30mps_southWind_neapTide/0006.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">7 / 25</div>
+    <div class="numbertext">7 / 24</div>
     <img src="../30mps_southWind_neapTide/0007.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">8 / 25</div>
+    <div class="numbertext">8 / 24</div>
     <img src="../30mps_southWind_neapTide/0008.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">9 / 25</div>
+    <div class="numbertext">9 / 24</div>
     <img src="../30mps_southWind_neapTide/0009 .png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">10 / 25</div>
+    <div class="numbertext">10 / 24</div>
     <img src="../30mps_southWind_neapTide/0010.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">11 / 25</div>
+    <div class="numbertext">11 / 24</div>
     <img src="../30mps_southWind_neapTide/0011.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">12 / 25</div>
+    <div class="numbertext">12 / 24</div>
     <img src="../30mps_southWind_neapTide/0012.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">13 / 25</div>
+    <div class="numbertext">13 / 24</div>
     <img src="../30mps_southWind_neapTide/0013.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">14 / 25</div>
+    <div class="numbertext">14 / 24</div>
     <img src="../30mps_southWind_neapTide/0014.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">15 / 25</div>
+    <div class="numbertext">15 / 24</div>
     <img src="../30mps_southWind_neapTide/0015.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">16 / 25</div>
+    <div class="numbertext">16 / 24</div>
     <img src="../30mps_southWind_neapTide/0016.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">17 / 25</div>
+    <div class="numbertext">17 / 24</div>
     <img src="../30mps_southWind_neapTide/0017.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">18 / 25</div>
+    <div class="numbertext">18 / 24</div>
     <img src="../30mps_southWind_neapTide/0018.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">19 / 25</div>
+    <div class="numbertext">19 / 24</div>
     <img src="../30mps_southWind_neapTide/0019.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">20 / 25</div>
+    <div class="numbertext">20 / 24</div>
     <img src="../30mps_southWind_neapTide/0020.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">21 / 25</div>
+    <div class="numbertext">21 / 24</div>
     <img src="../30mps_southWind_neapTide/0021.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">22 / 25</div>
+    <div class="numbertext">22 / 24</div>
     <img src="../30mps_southWind_neapTide/0022.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">23 / 25</div>
+    <div class="numbertext">23 / 24</div>
     <img src="../30mps_southWind_neapTide/0023.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">24 / 25</div>
+    <div class="numbertext">24 / 24</div>
     <img src="../30mps_southWind_neapTide/0024.png" style="width:100%">
   </div>
 
-  <div class="mySlides">
-    <div class="numbertext">25 / 25</div>
-    <img src="../30mps_southWind_neapTide/0025.png" style="width:100%">
-  </div>
 
 
 
@@ -334,9 +330,6 @@ img {
     </div>
     <div class="column">
       <img class="demo cursor" src="../30mps_southWind_neapTide/0024.png" style="width:100%" onclick="currentSlide(24)" alt="0024">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../30mps_southWind_neapTide/0025.png" style="width:100%" onclick="currentSlide(25)" alt="0025">
     </div>
 
 
