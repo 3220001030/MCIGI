@@ -24,20 +24,6 @@ common-js:
 <!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
 {% include head.html %}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 <body>
   {% include gtm_body.html %}
 
@@ -49,11 +35,10 @@ common-js:
 
   {% include footer-scripts.html %}
 
+  <!-- Particle animation background -->
+  <canvas id="canvas"></canvas>
 
-
-
-
-<script>
+  <script>
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     
@@ -168,15 +153,6 @@ common-js:
     }
 
     animate();
-</script>
-
-
-
-
-
-
-
-  
-
+  </script>
 </body>
 </html>
