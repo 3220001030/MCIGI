@@ -32,7 +32,7 @@ navbar-links:
     - e11-e15: "./動態/e11-e15"
     - e22-e24: "./動態/e22-e24"
   生態空間: "生態.html"
-  DeepSeek人工智能分析: "AI.html"
+  AI分析: "AI.html"
 
 ################
 # --- Logo --- #
