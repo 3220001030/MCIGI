@@ -24,7 +24,7 @@ common-js:
 <!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
 {% include head.html %}
 
-<body style="margin: 0; overflow: hidden;">  <!-- Ensure no scrollbars -->
+<body style="margin: 0; overflow: auto;">  <!-- Allow scrolling -->
   {% include gtm_body.html %}
 
   {% include nav.html %}
@@ -36,18 +36,23 @@ common-js:
   {% include footer-scripts.html %}
 
   <!-- Particle animation background -->
-  <canvas id="canvas" style="position: absolute; top: 0; left: 0; z-index: -1;"></canvas>
+  <canvas id="canvas" style="position: fixed; top: 0; left: 0; z-index: -1; pointer-events: none;"></canvas>
 
   <script>
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     
-    // Setup canvas
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    // Setup canvas size based on the body height
+    function setCanvasSize() {
+      canvas.width = window.innerWidth;
+      canvas.height = document.body.scrollHeight;  // Ensure canvas matches the height of the document
+    }
+    
+    window.addEventListener('resize', setCanvasSize); // Update canvas size on window resize
+    setCanvasSize();  // Set canvas size initially
     
     // Mouse position
-    const mouse = { x: canvas.width/2, y: canvas.height/2, radius: 150 };
+    const mouse = { x: canvas.width / 2, y: canvas.height / 2, radius: 150 };
     window.addEventListener('mousemove', (e) => {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
