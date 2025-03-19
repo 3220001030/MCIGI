@@ -1,48 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>particles.js</title>
-  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
-  <meta name="author" content="Vincent Garreau" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" media="screen" href="css/style.css">
-</head>
-<body>
+<html>
+<body style="margin: 0; background: #0a0a1a;">
+<canvas id="canvas"></canvas>
 
-<!-- count particles -->
-<div class="count-particles">
-  <span class="js-count-particles">--</span> particles
-</div>
-
-<!-- particles.js container -->
-<div id="particles-js"></div>
-
-<!-- scripts -->
-<script src="../particles.js"></script>
-<script src="app.js"></script>
-
-<!-- stats.js -->
-<script src="stats.js"></script>
 <script>
-  var count_particles, stats, update;
-  stats = new Stats;
-  stats.setMode(0);
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.left = '0px';
-  stats.domElement.style.top = '0px';
-  document.body.appendChild(stats.domElement);
-  count_particles = document.querySelector('.js-count-particles');
-  update = function() {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
-</script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Setup canvas
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    // Mouse position
+    const mouse = { x: canvas.width/2, y: canvas.height/2, radius: 150 };
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    });
 
+    // Particle settings
+    const settings = {
+        count: 300,
+        maxSpeed: 0.8,
+        connectionDistance: 100,
+        mouseStrength: 0.2
+    };
+
+    // Create particles
+    const particles = [];
+    for (let i = 0; i < settings.count; i++) {
+        particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5,
+            baseSize: Math.random() * 1.5 + 1
+        });
+    }
+
+    function animate() {
+        // Fade effect
+        ctx.fillStyle = 'rgba(10, 10, 26, 0.1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(p => {
+            // Autonomous movement
+            p.x += p.vx;
+            p.y += p.vy;
+            
+            // Add random motion
+            p.vx += (Math.random() - 0.5) * 0.1;
+            p.vy += (Math.random() - 0.5) * 0.1;
+            
+            // Keep velocity in check
+            p.vx = Math.min(Math.max(p.vx, -settings.maxSpeed), settings.maxSpeed);
+            p.vy = Math.min(Math.max(p.vy, -settings.maxSpeed), settings.maxSpeed);
+
+            // Mouse influence
+            const dx = mouse.x - p.x;
+            const dy = mouse.y - p.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            
+            if(dist < mouse.radius) {
+                const force = (mouse.radius - dist) / mouse.radius;
+                p.x += dx * force * settings.mouseStrength;
+                p.y += dy * force * settings.mouseStrength;
+            }
+
+            // Draw particle
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.baseSize, 0, Math.PI * 2);
+            ctx.fillStyle = `hsl(220, 80%, ${70 + dist/4}%)`;
+            ctx.fill();
+        });
+
+        // Draw connections
+        particles.forEach((p1, i) => {
+            particles.slice(i + 1).forEach(p2 => {
+                const dx = p1.x - p2.x;
+                const dy = p1.y - p2.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                if(dist < settings.connectionDistance) {
+                    ctx.beginPath();
+                    ctx.moveTo(p1.x, p1.y);
+                    ctx.lineTo(p2.x, p2.y);
+                    ctx.strokeStyle = `rgba(255, 255, 255, ${0.3 - dist/settings.connectionDistance})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            });
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+</script>
 </body>
 </html>
