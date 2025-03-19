@@ -118,34 +118,52 @@ img {
 
 <div class="container">
   <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
+    <div class="numbertext">1 / 7</div>
     <img src="../20mps_southWind_neapTide/0001.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
+    <div class="numbertext">2 / 7</div>
     <img src="../20mps_southWind_neapTide/0002.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
+    <div class="numbertext">3 / 7</div>
     <img src="../20mps_southWind_neapTide/0003.png" style="width:100%">
   </div>
     
   <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
+    <div class="numbertext">4 / 7</div>
     <img src="../20mps_southWind_neapTide/0004.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
+    <div class="numbertext">5 / 7</div>
     <img src="../20mps_southWind_neapTide/0005.png" style="width:100%">
   </div>
     
   <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
+    <div class="numbertext">6 / 7</div>
     <img src="../20mps_southWind_neapTide/0006.png" style="width:100%">
   </div>
+
+  <div class="mySlides">
+    <div class="numbertext">7 / 7</div>
+    <img src="../20mps_southWind_neapTide/0007.png" style="width:100%">
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     
   <a class="prev" onclick="plusSlides(-1)">❮</a>
   <a class="next" onclick="plusSlides(1)">❯</a>
@@ -173,6 +191,24 @@ img {
     <div class="column">
       <img class="demo cursor" src="../20mps_southWind_neapTide/0006.png" style="width:100%" onclick="currentSlide(6)" alt="0006">
     </div>
+    <div class="column">
+      <img class="demo cursor" src="../20mps_southWind_neapTide/0007.png" style="width:100%" onclick="currentSlide(7)" alt="0007">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
   </div>
 </div>
 
