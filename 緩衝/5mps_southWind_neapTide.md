@@ -10,7 +10,7 @@ subtitle: 5mps_southWind_neapTide
 
 
 
-<!DOCTYPE html>
+
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -117,7 +117,7 @@ img {
 <div class="container">
   <div class="mySlides">
     <div class="numbertext">1 / 6</div>
-    <img src="./20mps_southWind_neapTide/0001.png" style="width:100%">
+    <img src="../20mps_southWind_neapTide/0001.png" style="width:100%">
   </div>
 
   <div class="mySlides">
