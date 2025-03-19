@@ -69,7 +69,7 @@
             // Draw particle
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.baseSize, 0, Math.PI * 2);
-            ctx.fillStyle = '#e0e0e0'; // Light gray
+            ctx.fillStyle = '#b3b3b3'; // Light gray
             ctx.fill();
         });
 
@@ -84,7 +84,7 @@
                     ctx.beginPath();
                     ctx.moveTo(p1.x, p1.y);
                     ctx.lineTo(p2.x, p2.y);
-                    ctx.strokeStyle = `rgba(224, 224, 224, ${0.3 - dist/settings.connectionDistance})`; // Light gray
+                    ctx.strokeStyle = `rgba(179, 179, 179, ${0.3 - dist/settings.connectionDistance})`; // Light gray
                     ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }
