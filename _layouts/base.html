@@ -24,6 +24,144 @@ common-js:
 <!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
 {% include head.html %}
 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body style="margin: 0; background: transparent;">
+<canvas id="canvas"></canvas>
+
+<script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Setup canvas
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    // Mouse position
+    const mouse = { x: canvas.width/2, y: canvas.height/2, radius: 150 };
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    });
+
+    // Particle settings
+    const settings = {
+        count: 150,
+        maxSpeed: 0.8,
+        connectionDistance: 1000,
+        mouseStrength: 0.2,
+        edgePadding: 20 // Minimum distance from screen edges
+    };
+
+    // Create particles
+    const particles = [];
+    for (let i = 0; i < settings.count; i++) {
+        particles.push({
+            x: Math.random() * (canvas.width - settings.edgePadding * 2) + settings.edgePadding,
+            y: Math.random() * (canvas.height - settings.edgePadding * 2) + settings.edgePadding,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5,
+            baseSize: Math.random() * 1.5 + 1
+        });
+    }
+
+    function keepInBounds(p) {
+        // Horizontal bounds
+        if (p.x < settings.edgePadding) {
+            p.x = settings.edgePadding;
+            p.vx *= -0.8; // Bounce with dampening
+        } else if (p.x > canvas.width - settings.edgePadding) {
+            p.x = canvas.width - settings.edgePadding;
+            p.vx *= -0.8;
+        }
+
+        // Vertical bounds
+        if (p.y < settings.edgePadding) {
+            p.y = settings.edgePadding;
+            p.vy *= -0.8;
+        } else if (p.y > canvas.height - settings.edgePadding) {
+            p.y = canvas.height - settings.edgePadding;
+            p.vy *= -0.8;
+        }
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(p => {
+            // Autonomous movement
+            p.x += p.vx;
+            p.y += p.vy;
+            
+            // Add random motion
+            p.vx += (Math.random() - 0.5) * 0.1;
+            p.vy += (Math.random() - 0.5) * 0.1;
+            
+            // Keep velocity in check
+            p.vx = Math.min(Math.max(p.vx, -settings.maxSpeed), settings.maxSpeed);
+            p.vy = Math.min(Math.max(p.vy, -settings.maxSpeed), settings.maxSpeed);
+
+            // Enforce screen boundaries
+            keepInBounds(p);
+
+            // Mouse influence
+            const dx = mouse.x - p.x;
+            const dy = mouse.y - p.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            
+            if(dist < mouse.radius) {
+                const force = (mouse.radius - dist) / mouse.radius;
+                p.x += dx * force * settings.mouseStrength;
+                p.y += dy * force * settings.mouseStrength;
+            }
+
+            // Draw particle
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.baseSize, 0, Math.PI * 2);
+            ctx.fillStyle = '#a1a1a1';
+            ctx.fill();
+        });
+
+        // Draw connections
+        particles.forEach((p1, i) => {
+            particles.slice(i + 1).forEach(p2 => {
+                const dx = p1.x - p2.x;
+                const dy = p1.y - p2.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                if(dist < settings.connectionDistance) {
+                    ctx.beginPath();
+                    ctx.moveTo(p1.x, p1.y);
+                    ctx.lineTo(p2.x, p2.y);
+                    ctx.strokeStyle = `rgba(107, 107, 107, ${0.3 - dist/settings.connectionDistance})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.stroke();
+                }
+            });
+        });
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+  
 <body>
   {% include gtm_body.html %}
 
