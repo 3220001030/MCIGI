@@ -20,26 +20,46 @@
 
     // Particle settings
     const settings = {
-        count: 200,
+        count: 150,
         maxSpeed: 0.8,
         connectionDistance: 1000,
-        mouseStrength: 0.2
+        mouseStrength: 0.2,
+        edgePadding: 20 // Minimum distance from screen edges
     };
 
     // Create particles
     const particles = [];
     for (let i = 0; i < settings.count; i++) {
         particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
+            x: Math.random() * (canvas.width - settings.edgePadding * 2) + settings.edgePadding,
+            y: Math.random() * (canvas.height - settings.edgePadding * 2) + settings.edgePadding,
             vx: (Math.random() - 0.5) * 0.5,
             vy: (Math.random() - 0.5) * 0.5,
             baseSize: Math.random() * 1.5 + 1
         });
     }
 
+    function keepInBounds(p) {
+        // Horizontal bounds
+        if (p.x < settings.edgePadding) {
+            p.x = settings.edgePadding;
+            p.vx *= -0.8; // Bounce with dampening
+        } else if (p.x > canvas.width - settings.edgePadding) {
+            p.x = canvas.width - settings.edgePadding;
+            p.vx *= -0.8;
+        }
+
+        // Vertical bounds
+        if (p.y < settings.edgePadding) {
+            p.y = settings.edgePadding;
+            p.vy *= -0.8;
+        } else if (p.y > canvas.height - settings.edgePadding) {
+            p.y = canvas.height - settings.edgePadding;
+            p.vy *= -0.8;
+        }
+    }
+
     function animate() {
-        // Clear canvas completely each frame
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         particles.forEach(p => {
@@ -55,6 +75,9 @@
             p.vx = Math.min(Math.max(p.vx, -settings.maxSpeed), settings.maxSpeed);
             p.vy = Math.min(Math.max(p.vy, -settings.maxSpeed), settings.maxSpeed);
 
+            // Enforce screen boundaries
+            keepInBounds(p);
+
             // Mouse influence
             const dx = mouse.x - p.x;
             const dy = mouse.y - p.y;
@@ -69,7 +92,7 @@
             // Draw particle
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.baseSize, 0, Math.PI * 2);
-            ctx.fillStyle = '#b3b3b3'; // Light gray
+            ctx.fillStyle = '#a1a1a1';
             ctx.fill();
         });
 
@@ -84,7 +107,7 @@
                     ctx.beginPath();
                     ctx.moveTo(p1.x, p1.y);
                     ctx.lineTo(p2.x, p2.y);
-                    ctx.strokeStyle = `rgba(179, 179, 179, ${0.3 - dist/settings.connectionDistance})`; // Light gray
+                    ctx.strokeStyle = `rgba(107, 107, 107, ${0.3 - dist/settings.connectionDistance})`;
                     ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }
