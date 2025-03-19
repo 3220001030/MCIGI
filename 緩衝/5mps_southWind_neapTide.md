@@ -3,7 +3,7 @@ layout: page
 title: 緩衝空間
 subtitle: 5mps_southWind_neapTide
 ---
-
+<h2 style="text-align:center">高分辨率動態視頻</h2>
 <video width="100%" controls autoplay loop>
   <source src="../5mps_southWind_neapTide/video.mp4" type="video/mp4">
 </video>
@@ -112,7 +112,7 @@ img {
 </style>
 <body>
 
-<h2 style="text-align:center">Slideshow Gallery</h2>
+<h2 style="text-align:center">高分辨率靜態圖像</h2>
 
 <div class="container">
   <div class="mySlides">
