@@ -118,129 +118,110 @@ img {
 
 <div class="container">
   <div class="mySlides">
-    <div class="numbertext">1 / 25</div>
+    <div class="numbertext">1 / 20</div>
     <img src="../40mps_southeastWind_springTide/0001.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">2 / 25</div>
+    <div class="numbertext">2 / 20</div>
     <img src="../40mps_southeastWind_springTide/0002.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">3 / 25</div>
+    <div class="numbertext">3 / 20</div>
     <img src="../40mps_southeastWind_springTide/0003.png" style="width:100%">
   </div>
     
   <div class="mySlides">
-    <div class="numbertext">4 / 25</div>
+    <div class="numbertext">4 / 20</div>
     <img src="../40mps_southeastWind_springTide/0004.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">5 / 25</div>
+    <div class="numbertext">5 / 20</div>
     <img src="../40mps_southeastWind_springTide/0005.png" style="width:100%">
   </div>
     
   <div class="mySlides">
-    <div class="numbertext">6 / 25</div>
+    <div class="numbertext">6 / 20</div>
     <img src="../40mps_southeastWind_springTide/0006.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">7 / 25</div>
+    <div class="numbertext">7 / 20</div>
     <img src="../40mps_southeastWind_springTide/0007.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">8 / 25</div>
+    <div class="numbertext">8 / 20</div>
     <img src="../40mps_southeastWind_springTide/0008.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">9 / 25</div>
+    <div class="numbertext">9 / 20</div>
     <img src="../40mps_southeastWind_springTide/0009 .png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">10 / 25</div>
+    <div class="numbertext">10 / 20</div>
     <img src="../40mps_southeastWind_springTide/0010.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">11 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0011.png" style="width:100%">
+    <div class="numbertext">11 / 20</div>
+    <img src="../new/40mps_southeastWind_springTide/0001.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">12 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0012.png" style="width:100%">
+    <div class="numbertext">12 / 20</div>
+    <img src="../new/40mps_southeastWind_springTide/0002.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">13 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0013.png" style="width:100%">
+    <div class="numbertext">13 / 20</div>
+    <img src="../new/40mps_southeastWind_springTide/0003.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">14 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0014.png" style="width:100%">
+    <div class="numbertext">14 / 20</div>
+    <img src="../new/40mps_southeastWind_springTide/0004.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">15 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0015.png" style="width:100%">
+    <div class="numbertext">15 / 20</div>
+    <img src="../new/40mps_southeastWind_springTide/0005.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">16 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0016.png" style="width:100%">
+    <div class="numbertext">16 / 20</div>
+    <img src="../new/40mps_southeastWind_springTide/0006.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">17 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0017.png" style="width:100%">
+    <div class="numbertext">17 / 20</div>
+    <img src="../new/40mps_southeastWind_springTide/0007.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">18 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0018.png" style="width:100%">
+    <div class="numbertext">18 / 20</div>
+    <img src="../new/40mps_southeastWind_springTide/0008.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">19 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0019.png" style="width:100%">
+    <div class="numbertext">19 / 20</div>
+    <img src="../new/40mps_southeastWind_springTide/0009.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">20 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0020.png" style="width:100%">
+    <div class="numbertext">20 / 20</div>
+    <img src="../new/40mps_southeastWind_springTide/0010.png" style="width:100%">
   </div>
 
-  <div class="mySlides">
-    <div class="numbertext">21 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0021.png" style="width:100%">
-  </div>
+  
 
-  <div class="mySlides">
-    <div class="numbertext">22 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0022.png" style="width:100%">
-  </div>
+  
 
-  <div class="mySlides">
-    <div class="numbertext">23 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0023.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">24 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0024.png" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">25 / 25</div>
-    <img src="../40mps_southeastWind_springTide/0025.png" style="width:100%">
-  </div>
+  
 
 
 
@@ -294,50 +275,37 @@ img {
       <img class="demo cursor" src="../40mps_southeastWind_springTide/0010.png" style="width:100%" onclick="currentSlide(10)" alt="0010">
     </div>
     <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0011.png" style="width:100%" onclick="currentSlide(11)" alt="0011">
+      <img class="demo cursor" src="../new/40mps_southeastWind_springTide/0001.png" style="width:100%" onclick="currentSlide(11)" alt="0011">
     </div>
     <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0012.png" style="width:100%" onclick="currentSlide(12)" alt="0012">
+      <img class="demo cursor" src="../new/40mps_southeastWind_springTide/0002.png" style="width:100%" onclick="currentSlide(12)" alt="0012">
     </div>
     <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0013.png" style="width:100%" onclick="currentSlide(13)" alt="0013">
+      <img class="demo cursor" src="../new/40mps_southeastWind_springTide/0003.png" style="width:100%" onclick="currentSlide(13)" alt="0013">
     </div>
     <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0014.png" style="width:100%" onclick="currentSlide(14)" alt="0014">
+      <img class="demo cursor" src="../new/40mps_southeastWind_springTide/0004.png" style="width:100%" onclick="currentSlide(14)" alt="0014">
     </div>
     <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0015.png" style="width:100%" onclick="currentSlide(15)" alt="0015">
+      <img class="demo cursor" src="../new/40mps_southeastWind_springTide/0005.png" style="width:100%" onclick="currentSlide(15)" alt="0015">
     </div>
     <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0016.png" style="width:100%" onclick="currentSlide(16)" alt="0016">
+      <img class="demo cursor" src="../new/40mps_southeastWind_springTide/0006.png" style="width:100%" onclick="currentSlide(16)" alt="0016">
     </div>
     <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0017.png" style="width:100%" onclick="currentSlide(17)" alt="0017">
+      <img class="demo cursor" src="../new/40mps_southeastWind_springTide/0007.png" style="width:100%" onclick="currentSlide(17)" alt="0017">
     </div>
     <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0018.png" style="width:100%" onclick="currentSlide(18)" alt="0018">
+      <img class="demo cursor" src="../new/40mps_southeastWind_springTide/0008.png" style="width:100%" onclick="currentSlide(18)" alt="0018">
     </div>
     <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0019.png" style="width:100%" onclick="currentSlide(19)" alt="0019">
+      <img class="demo cursor" src="../new/40mps_southeastWind_springTide/0009.png" style="width:100%" onclick="currentSlide(19)" alt="0019">
     </div>
     <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0020.png" style="width:100%" onclick="currentSlide(20)" alt="0020">
+      <img class="demo cursor" src="../new/40mps_southeastWind_springTide/0010.png" style="width:100%" onclick="currentSlide(20)" alt="0020">
     </div>
-    <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0021.png" style="width:100%" onclick="currentSlide(21)" alt="0021">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0022.png" style="width:100%" onclick="currentSlide(22)" alt="0022">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0023.png" style="width:100%" onclick="currentSlide(23)" alt="0023">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0024.png" style="width:100%" onclick="currentSlide(24)" alt="0024">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../40mps_southeastWind_springTide/0025.png" style="width:100%" onclick="currentSlide(25)" alt="0025">
-    </div>
+    
+     
 
 
 
