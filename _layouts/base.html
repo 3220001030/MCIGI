@@ -24,7 +24,7 @@ common-js:
 <!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
 {% include head.html %}
 
-<body>
+<body style="margin: 0; overflow: hidden;">  <!-- Ensure no scrollbars -->
   {% include gtm_body.html %}
 
   {% include nav.html %}
@@ -36,7 +36,7 @@ common-js:
   {% include footer-scripts.html %}
 
   <!-- Particle animation background -->
-  <canvas id="canvas"></canvas>
+  <canvas id="canvas" style="position: absolute; top: 0; left: 0; z-index: -1;"></canvas>
 
   <script>
     const canvas = document.getElementById('canvas');
@@ -154,5 +154,6 @@ common-js:
 
     animate();
   </script>
+
 </body>
 </html>
