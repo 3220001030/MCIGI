@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Following Polygon</title>
+    <title>Polygonal Network Animation</title>
     <style>
-        canvas {
-            border: 1px solid #000;
-        }
         body {
             margin: 0;
             overflow: hidden;
+            background: #f0f0f0;
         }
+        #canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        /* Add your content styles here */
     </style>
 </head>
 <body>
+    <!-- Your content goes here -->
+    
     <canvas id="canvas"></canvas>
 
     <script>
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
         
-        // Set canvas size to window size
+        // Set canvas size
         function resizeCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
@@ -27,70 +34,117 @@
         resizeCanvas();
         window.addEventListener('resize', resizeCanvas);
 
-        // Mouse position variables
-        let mouseX = canvas.width / 2;
-        let mouseY = canvas.height / 2;
-
-        // Update mouse position
-        canvas.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
+        // Mouse position
+        let mouse = { x: 0, y: 0 };
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
         });
 
-        // Polygon properties
-        const numSides = 6; // Number of polygon sides
-        const baseRadius = 50; // Base radius of polygon
-        const maxDistortion = 30; // Maximum distortion from base radius
+        // Network parameters
+        const settings = {
+            nodeCount: 30,    // Number of nodes in each dimension
+            baseDist: 120,    // Base distance between nodes
+            maxOffset: 40,    // Maximum mouse influence distance
+            lineWidth: 1.5,   // Connection line width
+            fillColor: 'rgba(200, 220, 255, 0.15)',  // Polygon fill
+            strokeColor: 'rgba(100, 150, 200, 0.2)'  // Connection stroke
+        };
 
-        function drawPolygon() {
-            // Clear canvas
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Generate initial node grid
+        let nodes = [];
+        function generateNodes() {
+            nodes = [];
+            const cols = Math.ceil(canvas.width / settings.baseDist) + 2;
+            const rows = Math.ceil(canvas.height / settings.baseDist) + 2;
             
-            // Calculate distance from center to mouse
-            const centerX = canvas.width / 2;
-            const centerY = canvas.height / 2;
-            const distX = mouseX - centerX;
-            const distY = mouseY - centerY;
-            const distance = Math.sqrt(distX * distX + distY * distY);
-            
-            // Calculate distortion factor (0-1)
-            const distortion = Math.min(distance / 300, 1);
-
-            // Draw polygon
-            ctx.beginPath();
-            for (let i = 0; i < numSides; i++) {
-                // Calculate angle for each vertex
-                const angle = (i * 2 * Math.PI) / numSides;
-                
-                // Calculate radius with distortion based on mouse position
-                const radius = baseRadius + (maxDistortion * distortion * Math.sin(angle + Date.now() * 0.002));
-                
-                // Calculate vertex position
-                const x = mouseX + radius * Math.cos(angle);
-                const y = mouseY + radius * Math.sin(angle);
-                
-                // Create lines between points
-                if (i === 0) {
-                    ctx.moveTo(x, y);
-                } else {
-                    ctx.lineTo(x, y);
+            for (let y = 0; y < rows; y++) {
+                for (let x = 0; x < cols; x++) {
+                    nodes.push({
+                        x: x * settings.baseDist,
+                        y: y * settings.baseDist,
+                        baseX: x * settings.baseDist,
+                        baseY: y * settings.baseDist
+                    });
                 }
             }
-            ctx.closePath();
-            
-            // Style the polygon
-            ctx.fillStyle = 'rgba(100, 200, 255, 0.5)';
-            ctx.strokeStyle = '#0066ff';
-            ctx.lineWidth = 3;
-            ctx.fill();
-            ctx.stroke();
-            
-            // Animation loop
-            requestAnimationFrame(drawPolygon);
+        }
+        generateNodes();
+        window.addEventListener('resize', generateNodes);
+
+        // Update node positions based on mouse
+        function updateNodes() {
+            nodes.forEach(node => {
+                const dx = mouse.x - node.x;
+                const dy = mouse.y - node.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                // Mouse influence
+                if (distance < settings.maxOffset * 4) {
+                    const force = settings.maxOffset * (1 - distance/(settings.maxOffset * 4));
+                    const angle = Math.atan2(dy, dx);
+                    
+                    node.x = node.baseX + Math.cos(angle + Math.PI) * force;
+                    node.y = node.baseY + Math.sin(angle + Math.PI) * force;
+                } else {
+                    // Return to base position
+                    node.x += (node.baseX - node.x) * 0.1;
+                    node.y += (node.baseY - node.y) * 0.1;
+                }
+            });
         }
 
-        // Start animation
-        drawPolygon();
+        // Draw triangular network
+        function drawNetwork() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw connections
+            nodes.forEach((node, i) => {
+                const neighbors = [
+                    nodes[i + 1],
+                    nodes[i + Math.ceil(canvas.width / settings.baseDist) + 2],
+                    nodes[i - 1]
+                ];
+                
+                neighbors.forEach(neighbor => {
+                    if (neighbor) {
+                        ctx.beginPath();
+                        ctx.moveTo(node.x, node.y);
+                        ctx.lineTo(neighbor.x, neighbor.y);
+                        ctx.strokeStyle = settings.strokeColor;
+                        ctx.lineWidth = settings.lineWidth;
+                        ctx.stroke();
+                    }
+                });
+            });
+
+            // Draw polygons
+            nodes.forEach((node, i) => {
+                const neighbors = [
+                    nodes[i + 1],
+                    nodes[i + Math.ceil(canvas.width / settings.baseDist) + 2],
+                    nodes[i - 1]
+                ].filter(n => n);
+                
+                if (neighbors.length >= 2) {
+                    ctx.beginPath();
+                    ctx.moveTo(node.x, node.y);
+                    neighbors.forEach(neighbor => ctx.lineTo(neighbor.x, neighbor.y));
+                    ctx.closePath();
+                    
+                    ctx.fillStyle = settings.fillColor;
+                    ctx.fill();
+                }
+            });
+        }
+
+        // Animation loop
+        function animate() {
+            updateNodes();
+            drawNetwork();
+            requestAnimationFrame(animate);
+        }
+        animate();
     </script>
 </body>
 </html>
