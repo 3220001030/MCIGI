@@ -1,3 +1,13 @@
+<style>
+.avatar-img {
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+.avatar-img:hover {
+  transform: scale(1.2); /* Zoom scale (1.2 = 120% size) */
+}
+</style>
+
 <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
 
   {%- if site.title-img -%}
