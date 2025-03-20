@@ -1,3 +1,63 @@
+<style>
+/* Basic page styling */
+body {
+  margin: 0;
+  background: #f0f4f8; /* Light neutral background */
+  background-image: linear-gradient(120deg, #ffffff33 0%, #e5e9ec33 100%);
+  min-height: 100vh;
+}
+
+/* Tableau container styling */
+.tableau-container {
+  padding: 20px;
+  max-width: 1400px; /* Adjust based on your dashboard size */
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Optional decorative elements */
+.design-element {
+  position: fixed;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Top left subtle circle */
+.design-element.top-left {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #4a90e2 0%, transparent 70%);
+  top: -50px;
+  left: -50px;
+}
+
+/* Bottom right subtle circle */
+.design-element.bottom-right {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #50e3c2 0%, transparent 70%);
+  bottom: -100px;
+  right: -100px;
+}
+</style>
+
+<!-- Add these anywhere in your body -->
+<div class="design-element top-left"></div>
+<div class="design-element bottom-right"></div>
+
+<!-- Your Tableau container -->
+<div class="tableau-container">
+  <!-- Your existing Tableau embed code here -->
+</div>
+
+
+
+
+
+
+
+
+
 .hr-edge-weak {
     border: 0;
     padding-top: 1px;
